@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>carousel-slide</title>
+	<style>
+		.carousel {
+			position: relative;
+			height: 300px;
+			width: 400px;
+			margin: 30px auto;
+			overflow: hidden;
+		}
+
+		.carousel ul,
+		.carousel li {
+			margin:0;
+			padding:0;
+           list-style: none;          
+		}
+
+		.carousel .container {
+			position: absolute;
+		}
+
+		.carousel .container:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+
+		.carousel .container li {
+			float: left;
+		}
+
+        .carousel img {
+        	width:400px;
+        	height:300px;
+        	
+        }
+
+        .carousel .arrow {
+        	position: absolute;
+        	display: inline-block;
+        	top: 50%;
+        	margin-top: -15px;
+        	width:30px;
+        	height:30px;
+            line-height: 30px;
+        	border:2px solid #fff;
+        	color:#fff;
+        	border-radius: 50%;
+        	text-decoration: none;
+            text-align: center;
+
+        }
+
+        .carousel .arrow:hover {
+        	opacity: 0.6;
+        }
+        .carousel .pre {
+        	left: 10px;
+        }
+        .carousel .next {
+        	right: 10px;
+        }
+
+        .carousel .bullet {
+        	position: absolute;
+        	bottom: 15px;
+        	/*left: 50px;*/
+        	width: 100%;
+        	/*z-index: 1;*/
+        	text-align: center;
+        }
+        .carousel .bullet>li {
+        	display: inline-block;
+        	width:30px;
+        	height:5px;
+        	border:1px solid #ccc;
+        	border-radius: 4px;
+        	margin:0 3px;
+        	cursor: pointer;
+        }
+
+        .carousel .bullet>li.active {
+        	background-color: #ccc;
+        }
+
+           
+
+	</style>
+</head>
+<body>
+	<div class="carousel">
+		<ul class="container">
+			<li><a href="#"><img src="1.jfif" alt="1"></a></li>
+			<li><a href="#"><img src="3.jfif" alt="2"></a></li>
+			<li><a href="#"><img src="5.jpg" alt="3"></a></li>
+			<li><a href="#"><img src="4.jfif" alt="4"></a></li>
+		</ul>
+		<a href="#" class="pre arrow"><</a>
+		<a href="#" class="next arrow">></a>
+
+		<ul class="bullet">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+	<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="./carousel-slide.js"></script>
+</body>
+</html>
